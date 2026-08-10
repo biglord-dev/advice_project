@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #202733;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cee0e9;
+}
+
+.container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.advice-card {
+    width: 100%;
+    max-width: 790px;
+    min-height: 430px;
+
+    background: #323d4f;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 95px 55px 70px;
+
+    position: relative;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.advice-number {
+    color: #4df0a8;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-bottom: 60px;
+}
+
+.advice-card h1 {
+    max-width: 680px;
+
+    text-align: center;
+
+    font-size: 38px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    color: #dce8ee;
+}
+
+
+
+.divider {
+    width: 100%;
+    max-width: 680px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-top: 60px;
+}
+
+.divider span {
+    height: 2px;
+    background: #4c5869;
+    flex: 1;
+}
+
+.pause-icon {
+    display: flex;
+    gap: 7px;
+}
+
+.pause-icon i {
+    width: 6px;
+    height: 20px;
+
+    background: #dce8ee;
+
+    border-radius: 5px;
+}
+
+
+
+.dice-button {
+    position: absolute;
+
+    bottom: -38px;
+
+    width: 76px;
+    height: 76px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #4df0a8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.dice-button:hover {
+    transform: rotate(15deg) scale(1.08);
+    box-shadow: 0 0 30px rgba(77, 240, 168, 0.4);
+}
+
+.dice-button:active {
+    transform: scale(0.95);
+}
+
+
+
+.dice {
+    width: 30px;
+    height: 30px;
+
+    background: #202733;
+
+    border-radius: 6px;
+
+    position: relative;
+}
+
+
+
+.dice span {
+    width: 5px;
+    height: 5px;
+
+    background: #4df0a8;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+
+
+.dice span:nth-child(1) {
+    top: 6px;
+    left: 6px;
+}
+
+.dice span:nth-child(2) {
+    top: 6px;
+    right: 6px;
+}
+
+.dice span:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice span:nth-child(4) {
+    bottom: 6px;
+    left: 6px;
+}
+
+.dice span:nth-child(5) {
+    bottom: 6px;
+    right: 6px;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .advice-card {
+        max-width: 600px;
+
+        padding: 70px 35px 65px;
+
+        min-height: 380px;
+
+        border-radius: 16px;
+    }
+
+    .advice-number {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+    }
+
+    .advice-card h1 {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+
+    .divider {
+        margin-top: 45px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        align-items: center;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .advice-card {
+        width: 100%;
+
+        min-height: 350px;
+
+        padding: 55px 25px 60px;
+
+        border-radius: 14px;
+    }
+
+    .advice-number {
+        font-size: 12px;
+        letter-spacing: 3px;
+
+        margin-bottom: 35px;
+    }
+
+    .advice-card h1 {
+        font-size: 24px;
+        line-height: 1.45;
+    }
+
+    .divider {
+        margin-top: 40px;
+        gap: 18px;
+    }
+
+    .divider span {
+        height: 1px;
+    }
+
+    .pause-icon i {
+        width: 5px;
+        height: 17px;
+    }
+
+    .dice-button {
+        width: 70px;
+        height: 70px;
+
+        bottom: -35px;
+    }
+}
+
+
+
+
+@media (max-width: 350px) {
+
+    .advice-card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .advice-card h1 {
+        font-size: 21px;
+    }
+
+    .advice-number {
+        font-size: 10px;
+    }
+}
